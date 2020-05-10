@@ -1,0 +1,22 @@
+
+.admin-container .item1 { grid-area: header; }
+.admin-container .item2 { grid-area: menu;  min-height:400px;}
+.admin-container .item3 { grid-area: main;  min-height:400px;}
+.admin-container .item4 { grid-area: right;  min-height:400px;}
+
+.admin-container .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'menu main main main right';
+  grid-gap: 10px;
+  background-color: goldenrod;
+  padding: 10px;
+}
+
+.admin-container .grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

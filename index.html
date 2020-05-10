@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="student.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <!--ADMIN-->
+  <div class="admin-container">
+    <div class="grid-container">
+      <div class="item1">Header</div>
+      <div class="item2">
+        <input type="button" value="Logout" class="logout">
+      </div>
+      <div class="item3">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="item4">Right</div>
+    </div>
+  </div>
+
+  <!--STUDENT-->
+  <div class="student-container">
+    <div class="grid-container">
+      <div class="item1">Header</div>
+      <div class="item2">
+        <input type="button" value="Logout" class="logout">
+      </div>
+      <div class="item3">
+        <div class="question-container">
+          <div class="question">
+            <div id="firstNumber" class="numbers"> </div>
+            <div> X </div>
+            <div id="secondNumber" class="numbers"> </div>
+            <div>  = </div>
+            <div>
+              <input type="number" class="answer numbers">
+            </div>
+          </div>
+          <div>
+            <input type="button" class="answer-button" value="NEXT">
+          </div>
+        </div>
+      </div>
+      <div class="item4">
+        <div class="score"></div>
+        <div class="score-list-container">
+          <h3>Answers</h3>
+          <ul class="score-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--LOGIN-->
+  <div class="login-container">
+    <div class="login-form">
+      <div class="message"></div>
+      <input type="text" name="password" class="password">
+      <input type="button" value="Login" class="login-button">
+    </div>
+  </div>
+
+  <!-- libs -->
+  <script src="./libs/chart.js"></script>
+
+  <!-- views -->
+  <script src="./views/LoginView.js"></script>
+  <script src="./views/AdminView.js"></script>
+  <script src="./views/StudentView.js"></script>
+  <script src="./views/common/ScoreView.js"></script>
+  <script src="./views/common/ScoreListView.js"></script>
+  <script src="./views/common/ProgressChart.js"></script>
+
+  <!-- services -->
+  <script src="./services/DBManager.js"></script>
+  <script src="./services/Authentication.js"></script>
+
+  <!-- models -->
+  <script src="./models/Question.js"></script>
+  <script src="./models/Person.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
